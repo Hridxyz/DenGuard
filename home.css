@@ -1,0 +1,418 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .header-container {
+    position: fixed; /* Fix the position */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Ensure it spans the full width */
+  z-index: 1000; /* Ensure it stays on top of other content */
+  background-color: #fff; /* Specify a background color if needed */
+  }
+  .header-top {
+    display: flex;
+    align-items: center;
+    background-color: #fff; /* White background */
+    padding: 1px;
+    
+  }
+  
+  .logo {
+    height: 70px; /* Adjust as per your logo's aspect ratio */
+    margin-right: 0px;
+  }
+  
+  .header-title h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #071665;
+  }
+  
+  .header-title p {
+    margin: 0;
+    font-weight: lighter;
+  }
+  
+  .main-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #071665; /* CDC blue */
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 0;
+  }
+  
+  .main-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    margin-bottom: 0;
+    
+    font-size: larger;
+  }
+  
+  .main-nav a.language {
+    margin-left: auto;
+  }
+  .button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color:  #071665; /* Button color */
+    color: white; /* Text color */
+    text-align: center;
+    text-decoration: none; /* No underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background color transition on hover */
+  }
+  
+  .button-link:hover {
+    background-color:#030b37; /* Darker button color on hover */
+  }
+  
+  
+  .main-nav a:hover {
+    text-decoration: underline;
+  }
+
+  .featured-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0%;
+    
+  }
+  
+  .featured-image img {
+    width:  85%; /* Adjust the width as needed */
+    height: 20%;
+    margin-top: 165px;
+    margin-left: 40px;
+  }
+  
+  .featured-content {
+    margin-top: 10%;
+    width: 50%; /* Adjust the width as needed */
+    padding-left: 10px;
+    margin-right: 40px;
+    margin-left: 0.5pxpx;
+    
+  }
+  
+  .featured-content .tag {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+    
+  }
+  
+  .featured-content h2 {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    font-weight: normal;
+    color: #333;
+  }
+  
+  .featured-content h3 {
+    color:  #071665; /* Dark blue color */
+    margin: 10px 0;
+  }
+  
+  .featured-content p {
+    color: #666;
+  }
+  
+  .featured-content button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 10px;
+    outline: none;
+  }
+  
+  .featured-content button:hover {
+    background-color: #071665;;
+  }
+  header {
+    background-color: #071665;; /* CDC blue */
+    color: white;
+    padding: 10px 0;
+  }
+  main {
+    padding: 20px;
+    background-color: #fff;
+  }
+  .content-area {
+    display: flex;
+    
+    gap: 30px;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Add or modify your existing CSS with these styles */
+
+/* Assuming .text-content is your main container for text */
+.text-content {
+  margin-top: 10%;
+  flex: 1 1 50%;
+  flex-basis: 50%;
+  padding-right: 10px;
+  max-width: 50%;
+  background-color: #ffffff; /* white background */
+  padding: 20px; /* padding inside the text container */
+  border-radius: 4px; /* rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow effect */
+  margin-bottom: 20px; /* space below the text container */
+  color: #333; /* dark color for text */
+}
+
+/* Heading styles */
+.text-content h1,
+.text-content h2,
+.text-content h3 { /* adjust for your specific heading tags */
+  color: #ffffff;
+  background-color: #071665;; /* a dark blue similar to the first picture */
+  align-self: center;
+  margin-top: 1%;/* bold font weight for headings */
+  
+}
+
+/* Paragraph styles */
+.text-content p {
+  font-weight: normal; /* normal font weight for paragraph */
+  line-height: 1.5; /* line height for paragraph */
+}
+
+/* Carousel navigation button styles, assuming you have <a> or <button> with classes .prev and .next */
+.slider-container {
+  
+  margin-top: 12%;
+  flex-basis: 50%;
+  padding-left: 10px;
+  display: flex;
+  flex: 1 1 50%;
+  max-width: 50%;
+  width: 100%; /* Adjust based on your layout */
+  position: relative;
+  overflow: hidden; /* Hide the slides that overflow the width of the container */
+}
+
+.slide {
+  position: absolute; /* Position slides absolutely to stack them */
+  top: 0;
+  left: 0; /* Position slides out of view to the right */
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: none; /* Smooth transition for sliding effect */
+}
+
+.slide.active {
+  opacity: 1;
+  display: block;/* Position the active slide inside the container view */
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block; /* Remove extra space below images */
+}
+
+/* Navigation buttons for the slider */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: rgba(0,0,0,0.5);
+  user-select: none;
+  z-index: 2; /* Make sure arrows are above the images */
+}
+
+.next {
+  right: 0;
+}
+
+.prev {
+  left: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+@media (max-width: 768px) {
+  .content-area {
+    gap: 20px; /* Smaller gap on smaller screens */
+  }
+  .text-content,
+  .slider-container {
+    flex: 1 1 100%; /* On smaller screens, each section takes full width */
+    max-width: 100%; 
+    padding-right: 0;
+    padding-left: 0;
+    /*Maximum width of 100% for smaller screens */
+  }
+}
+/* Add this CSS to your existing stylesheet */
+.outbreaks-section {
+  margin-top: 12%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20p; /* Adjust as needed */
+}
+.travel-notices {
+  width: 10%; /* Adjust width to control the size of columns */
+  background-image: url('out.png'); /* Path to your image */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  padding: 20px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center content vertically and horizontally */
+  text-align: center; /* Center text */
+  height: 100px;
+  margin-top: 15%; 
+  margin-left: 5%;
+  margin-right: 3%;/* Set a fixed height, or adjust as needed */
+}
+
+.travel-notices h2, .travel-notices ul, .travel-notices p {
+  display: none; /* Hide text if you only want the image */
+}
+
+
+.india-outbreaks, .travel-notices {
+  width: 48%; /* Adjust width to control the size of columns */
+  background-color: #f5f5f5; /* Light grey background */
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.india-outbreaks h2, .travel-notices h2 {
+  color: #071665; /* Dark blue color */
+  margin-bottom: 10px;
+}
+
+.india-outbreaks ul, .travel-notices ul {
+  list-style-type: none; /* Remove default list styling */
+  padding-left: 0; /* Remove default padding */
+}
+
+.india-outbreaks li::before, .travel-notices li::before {
+  content: "• "; /* Custom bullet */
+  color: #071665; /* Bullet color */
+  font-weight: bold; /* Make the bullet bold */
+}
+
+.india-outbreaks p, .travel-notices p {
+  margin-bottom: 10px;
+  color: #333; /* Dark text for better readability */
+}
+
+/* You can also add media queries to handle responsiveness */
+@media (max-width: 768px) {
+  .outbreaks-section {
+    flex-direction: column;
+  }
+  .india-outbreaks, .travel-notices {
+    width: 100%; /* Full width on smaller screens */
+    margin-bottom: 20px; /* Add space between the sections */
+  }
+}
+/* Footer styling */
+#contactSection {
+  background-color: #293679; /* Dark background */
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-container {
+  margin-top: 15%;
+  /* Your styles for footer container */
+  background-color: #071665; /* Example background color */
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-info {
+  margin-bottom: 20px; /* Spacing below contact info */
+}
+
+.footer-links {
+  /* Styles for footer links */
+}
+
+.footer-links a {
+  color: #ffffff; /* Dark blue color from your spec */
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.social-icon {
+  /* Styles for social media icons */
+  font-size: 24px; /* Example size, adjust as needed */
+  padding: 0 5px;
+  color: #ffffff; /* Dark blue color */
+}
+
+.social-icon:hover {
+  color: #305777; /* Darker blue on hover */
+}
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f5f5f5; /* Light grey background */
+  border-radius: 4px; /* Rounded corners */
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.about-text {
+  color: #071665;
+  flex-basis: 50%;
+  margin-top: 5%;
+}
+
+.about-image {
+  flex-basis: 50%;
+}
+
+.about-image img {
+  width: 100%; /* Adjust as necessary */
+  height: auto;
+  margin-top: 5%;
+  margin-left: 0%;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animated-image {
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Ensure you have Font Awesome or similar for social icons */
