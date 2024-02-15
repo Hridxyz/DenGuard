@@ -4,15 +4,13 @@
 
 Den-Guard is a web-based platform designed to visualize and analyze the spread of dengue fever across India. This innovative tool aims to provide comprehensive insights into dengue cases by gender, age, and other relevant factors, alongside showcasing vaccination records.
 
-![Dengue Spread Analysis](images/dengue-analysis.png) *Image description: An interactive heatmap representing dengue fever spread across different regions of India.*
+![Dengue Spread Analysis](Figure_1_ActiveCases.png) *Image description: An interactive heatmap representing dengue fever spread across different regions of India.*
 
 ## Features
 
 - **Interactive Data Visualization:** Utilize temporal trends and regional heatmaps to understand the dynamics of dengue spread.
 - **Customizable Filters:** Explore data based on specific criteria such as gender, age groups, and more.
 - **Vaccination Records:** Access detailed records of paid and unpaid vaccinations to assess their impact on dengue prevention.
-
-![Vaccination Records Visualization](images/vaccination-records.png) *Image description: A chart showcasing the number of vaccinations over time, segmented by paid and unpaid statuses.*
 
 ## Built With
 
